@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f1f3f4;
+    font-family: sans-serif;
+}
+.top-nav-bar {
+    height: 65px;
+    top: 0;
+    position: sticky;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 3px solid orange;
+    z-index: 2;
+}
+.form-control {
+    margin-top: 7px;
+    margin-left: 30px;
+    margin-bottom: 7px;
+    border: 1px solid orange !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.input-group-text {
+    background-color: orange !important;
+    border: 1PX solid orange !important;
+    margin: 7px 10px 7px 0;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    cursor: pointer;
+}
+.search-box {
+    display: inline-flex;
+    width: 60%;
+}
+.bi-search {
+    color: white;
+}
+.menu-bar {
+    width: 40%;
+    height: 60px;
+    float: right;
+}
+.menu-bar ul {
+    display: inline-flex;
+    float: right;
+}
+.menu-bar ul li {
+    border-left: 1px solid #fff;
+    list-style-type: none;
+    padding: 15px 35px;
+    text-align: center;
+    background-color: orange;
+    cursor: pointer;
+}
+.menu-bar ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+.bi-basket-fill {
+    margin-right: 5px;
+}
+@media only screen and (max-width: 980px) {
+
+    .top-nav-bar {
+        height: 120px;
+        border-bottom: 0;
+    }
+    .search-box {
+        width: 100%;
+    }
+    .menu-bar {
+        width: 100%;
+    }
+    .menu-bar ul {
+        margin: 5px 0 0 0;
+        width: 100%;
+    }
+    .menu-bar ul li {
+        height: 60px;
+        width: 100%;
+    }
+}
+
+
+
+/* -----------side-menu---------------- */
+.side-menu {
+    height: 650px;
+    width: 15%;
+    font-size: 15px;
+    float: left;
+    z-index: 2;
+    background-color: #ddd;
+    /* display: none; */
+}
+.side-menu ul {
+    margin-left: 0;
+}
+.side-menu ul li {
+    list-style-type: none;
+    font-weight: bold;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.side-menu ul li:hover {
+    color: orange;
+}
+.side-menu ul li ul {
+    display: none;
+    z-index: 10;
+    top: 80px;
+}
+.side-menu ul li:hover ul {
+    display: block;
+    height: 400px;
+    margin-left: 12.5%;
+    padding: 0 100px 10px 10px;
+    position: fixed;
+    background-color: #ececec;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+
+}
+.bi-chevron-right {
+    margin-top: 2px;
+    margin-right: 8px;
+    float: right;
+}
+#menu-btn, #close-btn {
+    font-size: 30px;
+    margin: 6px;
+    color: orange;
+    display: none;
+}
+@media only screen and (max-width: 980px) {
+    .side-menu {
+        width: 30%;
+        line-height: 20px;
+        z-index: 20;
+        top: 133px;
+        position: fixed;
+        font-size: 10px;
+    }
+    .side-menu ul li ul {
+        top: 133px;
+    }
+    .side-menu ul li:hover ul {
+        margin-left: 26%;
+
+    }
+    #menu-btn, #close-btn {
+        display: block;
+    }
+}
+/* ---------------slider css-------------------------- */
+.slider {
+    width: 84%;
+    margin-left: 16%;
+}
+.carousel {
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 980px) {
+    .slider {
+        width: 100%;
+        margin-left: 0;
+    }
+    .carousel-item img {
+        height: 400px;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .carousel-item img {
+        height: 250px;
+    }
+}
+
+
+/* -------------------------features categories-------------------------- */
+
+.featured-categories {
+    margin: 50px 0;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.row1 img {
+    height: 200px;
+    width: 300px;
+    cursor: pointer;
+    transition: 1s;
+}
+.row1 img:hover {
+    transform: scale(1.1);
+}
+
+/* -----------------------------on sale-------------------------------------- */
+
+.title-box {
+    background-color: orange;
+    color: #fff;
+    width: 180px;
+    padding: 4px 10px;
+    height: 40px;
+    margin-bottom: 30px;
+    display: flex;
+}
+.title-box h2 {
+    font-size: 24px;
+}
+.title-box::after {
+    content: '';
+    border-top: 40px solid orange;
+    border-right: 50px solid transparent;
+    position: absolute;
+    display: flex;
+    margin-top: -4px;
+    margin-left: 170px;
+}
+ .overlay-right {
+    display: block;
+    /* position: absolute; */
+    /* background-color: orange; */
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+   
+}
+.overlay-right .btn-secondary {
+    background-color: orange;
+    border: none;
+}
+
+.product-bottom .bi{
+    color: orange;
+    font-size: 14px;
+}
+.product-bottom h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+.product-bottom h5 {
+    font-size: 18px;
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: space-evenly;
+}
+
+.about-policy {
+    width: 200px;
+}
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    width: 90%;
+    margin: 50px;
+    margin-left: 10%;
+}
+.footer {
+    background-color: rgb(130, 90, 90);
+}
+.footer-container {
+    /* background-color: black; */
+    color: #fff;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.link {
+    padding-top: 30px;
+}
+.link h1 {
+    font-size: 28px;
+}
+.link p {
+    font-size: 14px;
+}
+
+.copy-right {
+    color: white;
+    text-align: center;
+}
+
+/* -----------------------------single product------------------------------------------ */
+
+.single-product {
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+.new-arrival {
+    background-color: green;
+    width: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.col-md-7 h2 {
+    color: #555;
+}
+.single-product .bi {
+    color: orange;
+
+}
+.single-product .price {
+     color: orange;
+     font-size: 30px;
+     font-weight: bold;
+     padding-top: 20px;
+}
+.single-product input {
+    border: 1px solid #ccc;
+    font-weight: bold;
+    height: 34px;
+    text-align: center;
+    width: 32px;
+}
+.single-product .btn-primary {
+    background-color: orange !important;
+    font-family: 16px;
+    margin-left: 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.product-discription h5 {
+    color: orange;
+}
+.product-discription p {
+    margin-top: 30px;
+}
+.product-discription hr {
+    margin-bottom: 50px;
+}
